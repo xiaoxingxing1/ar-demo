@@ -11,7 +11,7 @@
       window.onload = () => {
         navigator.geolocation.getCurrentPosition((position) => {
           document
-            .querySelector('a-text')
+            .querySelector('a-entity')
             .setAttribute(
               'gps-entity-place',
               `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`
@@ -27,11 +27,16 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <a-text
+      <a-entity
+        gltf-model="https://a.amap.com/jsapi_demos/static/gltf/Duck.gltf"
+        scale="2 2 2"
+        look-at="[gps-camera]"
+      ></a-entity>
+<!--       <a-text
         value="No markers around"
         look-at="[gps-camera]"
         scale="5 5 5"
-      ></a-text>
+      ></a-text> -->
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
