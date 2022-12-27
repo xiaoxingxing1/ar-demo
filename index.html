@@ -16,12 +16,6 @@
               'gps-entity-place',
               `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`
             )
-          document
-            .querySelector('a-text')
-            .setAttribute(
-              'gps-entity-place',
-              `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`
-            )
         })
       }
     </script>
@@ -37,12 +31,13 @@
         gltf-model="https://a.amap.com/jsapi_demos/static/gltf/Duck.gltf"
         scale="0.2 0.2 0.2"
         look-at="[gps-camera]"
+        rotation="90 0 -20"
       ></a-entity>
-      <a-text
+<!--       <a-text
         value="小黄鸭"
         look-at="[gps-camera]"
         scale="2 2 2"
-      ></a-text>
+      ></a-text> -->
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
