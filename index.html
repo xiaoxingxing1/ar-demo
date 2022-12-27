@@ -13,7 +13,7 @@
           document
             .querySelector('a-entity')
             .setAttribute(
-              'gps-projected-entity-place',
+              'gps-entity-place',
               `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`
             )
         })
@@ -38,7 +38,7 @@
         look-at="[gps-camera]"
         scale="2 2 2"
       ></a-text> -->
-      <a-camera gps-projected-camera rotation-reader> </a-camera>
+      <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
 </html>
